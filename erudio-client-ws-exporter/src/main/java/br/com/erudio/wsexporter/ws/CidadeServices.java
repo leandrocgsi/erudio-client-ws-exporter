@@ -7,6 +7,7 @@ import br.com.erudio.wsexporter.factory.Factory;
 import java.util.List;
 import javax.inject.Named;
 import org.apache.log4j.Logger;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 
 @Named
@@ -41,6 +42,7 @@ public class CidadeServices implements ICidadeRestService {
     }
 
     @Override
+    @PreAuthorize("hasRole('ROLE_USER')") 
     public BeanCidade findCidadeById(Integer id) {
         return serviceCidade.findCidadeById(id);
     }    
