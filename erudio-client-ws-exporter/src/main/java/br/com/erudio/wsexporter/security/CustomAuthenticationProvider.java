@@ -25,7 +25,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         List usuarios = servicePessoa.findPessoaByLogin(authentication.getName());
         List<GrantedAuthority> auth = new ArrayList<GrantedAuthority>();                
             try {
-                if (usuarios != null && usuarios.isEmpty()) {
+                if (usuarios == null || usuarios.isEmpty()) {
                     throw new UsernameNotFoundException("Usuario nao encontrado!");
                 }
                 pessoa = (BeanPessoa) usuarios.get(0);

@@ -42,7 +42,7 @@ public class CidadeServices implements ICidadeRestService {
     }
 
     @Override
-    @PreAuthorize("hasRole('ROLE_USER')") 
+    //@PreAuthorize("hasRole('ROLE_USER')") 
     public BeanCidade findCidadeById(Integer id) {
         return serviceCidade.findCidadeById(id);
     }    

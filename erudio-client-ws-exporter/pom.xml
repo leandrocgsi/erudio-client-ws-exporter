@@ -8,7 +8,7 @@
     </parent>
     <groupId>br.com.erudio</groupId>
     <artifactId>erudio-client-ws-exporter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>erudio-client-ws-exporter</name>
@@ -31,10 +31,11 @@
     </repositories>
     
     <dependencies>
-        <!-- PALGER CLIENT CONTROL UTILS -->
+        <!-- ERUDIO CLIENT CONTROL UTILS -->
         <dependency>
             <groupId>br.com.erudio</groupId>
             <artifactId>erudio-utils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- JAVAX INJECT -->
